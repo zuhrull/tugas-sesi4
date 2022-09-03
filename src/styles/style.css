@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;  
+  background-color: #0d1117;
+}
+
+.topnav {
+  background-color: #161b22;
+  overflow: hidden;
+}
+  
+.topnav i {
+  padding: 10px 20px 10px 40px;
+  float: left;
+  font-size: 35px;
+  color: white;
+}
+
+.topnav form {
+  float: left;
+  margin-top: 12px;
+  margin-left: 2px;
+}
+
+.topnav input {
+  height: 30px;
+  width: 250px;
+  background-color: #0d1117;
+  border: 1px solid #2d333a;
+  border-radius: 6px;
+}
+
+.topnav input::placeholder {
+  color: rgb(170, 170, 169);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 15px 5px 10px 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+  
+.topnav a:hover {
+  color: gray ;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav i {
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+
+.topnav i:hover{
+  color: gray;
+}
+
+.profile-pic {
+  max-width: 25px;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-left: 40%;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 39%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  height: 300px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size: 20px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .profile-pic {
+  background-color: #3e8e41;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+main {
+  margin: 1em;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+  
+.flex-item-left {
+  flex: 30%;
+}
+  
+.flex-item-right {
+  flex: 70%;
+}
+
+.avatar {
+  height: auto;
+  width: 290px;
+  border-radius: 50%;
+  margin: 35px 10px 10px 30px;
+  cursor: pointer;
+}
+
+.aside h2, h3, p{
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1px;
+  padding-left: 30px;
+}
+
+.aside h3 {
+  margin-top: 1px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: lighter;
+}
+
+.aside p {
+  font-weight: lighter;
+  padding: 0px 10px 0px 30px;
+}
+
+.aside button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: #21262d;
+  border-radius: 3px;
+  border: none;
+  margin: 10px 5px 0 29px;
+  padding: 5px;
+  width: 85%;
+  transition-duration: 0,2s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.aside button:hover {
+  background-color: #2f363f;
+}
+
+hr {
+  border: 1px solid #21262d;
+  width: 84%;
+}
+
+.overview a {
+  text-decoration: none;
+  float: left;
+  color: white;
+  font-weight: lighter;
+  margin-top: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.overview a:hover {
+  background-color: #353637;
+  border-radius: 5%;
+}
+
+.overview h7 {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+  float: left;
+}
+
+.repo-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(min-content, max-content);
+  gap: 16px;
+  margin-right: 30px;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+.flex-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.repo-item__content {
+  flex: 45%;
+  position: relative;
+  width: 200px;
+  height: 105px;
+  border: 1px solid #2d333a;
+  border-radius: 4px;
+  padding-left: 0px;
+}
+
+.repo-item__title, .repo-item__desc, .repo-item__tag, .repo-item__status{
+  font-size: 12px;
+  font-weight: normal;
+  color: white;
+  margin: 0px;
+  margin-left: 0px;
+}
+
+.repo-item__title {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2569cf;
+}
+
+.repo-item__title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.repo-item__desc {
+  margin-top: 7px;
+  font-weight: lighter;
+  color: rgb(170, 170, 169);
+}
+
+.repo-item__tag {
+  margin-top: 15px;
+  color: rgb(170, 170, 169);
+}
+
+.repo-item__status {  
+  font-size: 10px;
+  color: rgb(170, 170, 169);
+  background-color: transparent;
+  border: 1px solid #2d333a;
+  border-radius: 12px;
+  padding: 4px;
+  margin: 10px 5px 0 29px;
+  position: absolute;
+  top: 12%;
+  right: 1px;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.table-contri {
+  margin-right: 30px;
+  position: relative;
+  border: 1px solid #2d333a;
+  border-radius: 4px;
+  width: 100%;
+  height: 300px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 2000px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background-color: #2d333a;
+  top: 1%;
+  bottom: 0;
+  left: 1%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  background-color: inherit;
+  width: 100%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -5px;
+  background-color: transparent;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  margin-left: 15px;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::before {
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+  background-color: transparent;
+  position: relative;
+  border: 1px solid #2d333a;
+  border-radius: 4px;
+}
+
+.content > h2, .content > p {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+}
+
+.content > h2 {
+  margin: 5px 0 5px 30px;
+  color: #216e39;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content > p {
+  margin: 5px 15px 10px 1px;
+  color: rgb(170, 170, 169);
+  font-size: 14px;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #023047;
+  text-align: center;
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+@media (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+    float: right;
+    display: block;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .column {
+      width: 100%;
+    }
+    .timeline::after {
+      left: 31px;
+      }
+      
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+      
+      /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+    
+      /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+      
+      /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
